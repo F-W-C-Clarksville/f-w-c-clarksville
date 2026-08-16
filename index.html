@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family Worship Center | Clarksville, TN – A Lighthouse in Clarksville</title>
+  <meta name="description" content="A Family Oriented Bible Believing Church in Clarksville, TN. Join us Sundays at 11:00 AM, Tuesdays at 6:30 PM for Open Prayer, and Wednesdays at 6:30 PM for Training on Gifts of Healings.">
+
+  <style>
+    /* ===== Warm Lighthouse Theme ===== */
+    :root {
+      --navy: #1a2a4a;
+      --navy-dark: #0f1c33;
+      --gold: #c9a227;
+      --gold-light: #e8c547;
+      --cream: #f8f5f0;
+      --white: #ffffff;
+      --text: #2c2c2c;
+      --text-light: #5a5a5a;
+      --shadow: 0 8px 30px rgba(26, 42, 74, 0.10);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--cream);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ===== Header ===== */
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo img {
+      height: 50px;
+      width: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover img {
+      transform: scale(1.05);
+    }
+
+    .logo span {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0.5px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.25s ease;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 1.75rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy-dark);
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(201, 162, 39, 0.3);
+    }
+
+    .btn-outline {
+      border: 2px solid var(--gold);
+      color: var(--gold);
+    }
+
+    .btn-outline:hover {
+      background: var(--gold);
+      color: var(--navy-dark);
+      transform: translateY(-3px);
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+      color: var(--white);
+      padding: 5rem 0 5.5rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5.5vw, 3rem);
+      margin-bottom: 0.75rem;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .hero .tagline {
+      font-size: 1.3rem;
+      color: var(--gold-light);
+      margin-bottom: 2rem;
+      font-weight: 500;
+      animation: fadeInUp 0.8s ease-out 0.15s both;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeInUp 0.8s ease-out 0.3s both;
+    }
+
+    /* ===== Sections ===== */
+    section {
+      padding: 4rem 0;
+    }
+
+    h2 {
+      font-size: 1.95rem;
+      color: var(--navy);
+      margin-bottom: 1.25rem;
+      text-align: center;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+      color: var(--text-light);
+      font-size: 1.1rem;
+    }
+
+    /* Welcome */
+    .welcome {
+      background: var(--white);
+    }
+
+    .welcome p {
+      font-size: 1.15rem;
+      max-width: 750px;
+      margin: 0 auto 1.25rem;
+      text-align: center;
+    }
+
+    /* Life at FWC - Photo Section */
+    .life-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .life-card {
+      background: var(--white);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: all 0.35s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .life-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 40px rgba(26, 42, 74, 0.14);
+    }
+
+    .life-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      object-position: center 15%;
+      display: block;
+    }
+
+    .life-card .caption {
+      padding: 1.15rem 1.4rem;
+      text-align: center;
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 1.05rem;
+      background: white;
+    }
+
+    /* Service Times */
+    .times-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .time-card {
+      background: var(--white);
+      padding: 1.8rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      border-top: 4px solid var(--gold);
+      transition: all 0.35s ease;
+    }
+
+    .time-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(26, 42, 74, 0.12);
+    }
+
+    .time-card h3 {
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+      font-size: 1.15rem;
+    }
+
+    .time-card .time {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .time-card .note {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      margin-top: 0.5rem;
+    }
+
+    .special-note {
+      text-align: center;
+      margin-top: 2.2rem;
+      color: var(--text-light);
+      font-size: 1.08rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Location */
+    .location {
+      background: var(--white);
+    }
+
+    .location-content {
+      text-align: center;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .location-content p {
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+    }
+
+    /* What to Expect */
+    .expect-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .expect-card {
+      background: var(--white);
+      padding: 1.75rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: all 0.35s ease;
+    }
+
+    .expect-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(26, 42, 74, 0.1);
+    }
+
+    .expect-card h3 {
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Ministries Teaser */
+    .ministries-teaser {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .ministries-teaser h2 {
+      color: var(--white);
+    }
+
+    .ministries-teaser .section-intro {
+      color: rgba(255,255,255,0.9);
+    }
+
+    .cta-box {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    /* Facebook CTA */
+    .facebook-cta {
+      text-align: center;
+      padding: 3.5rem 0;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: var(--navy-dark);
+      color: rgba(255,255,255,0.85);
+      padding: 2.5rem 0 1.5rem;
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--gold-light);
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-links {
+      margin: 1rem 0;
+    }
+
+    .copyright {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 700px) {
+      .life-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .life-card img {
+        height: 260px;
+      }
+
+      nav ul {
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+      .logo img {
+        height: 44px;
+      }
+      .logo span {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="FWC.jpg" alt="Family Worship Center">
+        <span>Family Worship Center</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="visit.html">Plan Your Visit</a></li>
+          <li><a href="ministries.html">Ministries</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="give.html">Give</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Family Worship Center</h1>
+      <p class="tagline">A Family Oriented Bible Believing Church – A Lighthouse in Clarksville</p>
+      <div class="hero-buttons">
+        <a href="visit.html" class="btn btn-primary">Plan Your Visit</a>
+        <a href="#times" class="btn btn-outline">Service Times</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Welcome -->
+  <section class="welcome">
+    <div class="container">
+      <h2>Welcome Home</h2>
+      <p>We are a warm, family-oriented church that loves Jesus and loves people. Our vision is simple: to be a lighthouse in Clarksville — shining the hope of the Gospel into our community and beyond.</p>
+      <p>We believe the gifts of the Holy Spirit are still active and vital today. God continues to heal, strengthen, and equip His people through the Spirit’s power so that we can walk in freedom and impact the world around us.</p>
+    </div>
+  </section>
+
+  <!-- Life at FWC - Photos -->
+  <section>
+    <div class="container">
+      <h2>Life at Family Worship Center</h2>
+      <p class="section-intro">Come experience the warmth, worship, and presence of God with us.</p>
+
+      <div class="life-grid">
+        <div class="life-card">
+          <img src="band.png" alt="Worship at Family Worship Center">
+          <div class="caption">Heartfelt Worship</div>
+        </div>
+        <div class="life-card">
+          <img src="john.png" alt="Pastor Jon Lockwood">
+          <div class="caption">Pastor Jon Lockwood</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Times -->
+  <section id="times">
+    <div class="container">
+      <h2>Service Times</h2>
+      <p class="section-intro">Join us this week. Everyone is welcome.</p>
+      <div class="times-grid">
+        <div class="time-card">
+          <h3>Sunday Morning</h3>
+          <div class="time">11:00 AM</div>
+          <p class="note">Morning Worship</p>
+        </div>
+        <div class="time-card">
+          <h3>Tuesday Evening</h3>
+          <div class="time">6:30 PM</div>
+          <p class="note">Open Prayer</p>
+        </div>
+        <div class="time-card">
+          <h3>Wednesday Evening</h3>
+          <div class="time">6:30 PM</div>
+          <p class="note">Training on Gifts of Healings<br>by Gary McGillvary</p>
+        </div>
+      </div>
+
+      <p class="special-note">
+        <strong>First Saturday of each month</strong> — Community Prayer at the Clarksville Courthouse
+      </p>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section class="location">
+    <div class="container">
+      <h2>Find Us</h2>
+      <div class="location-content">
+        <p><strong>Address</strong><br>
+        1273 Northfield Dr<br>
+        Clarksville, TN</p>
+        <p><strong>Phone</strong><br>
+        <a href="tel:9312167291">931-216-7291</a></p>
+        <p style="margin-top: 1.5rem;">
+          <a href="visit.html" class="btn btn-primary">Plan Your Visit</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Expect -->
+  <section>
+    <div class="container">
+      <h2>What to Expect</h2>
+      <p class="section-intro">We want your first visit to feel comfortable and meaningful.</p>
+      <div class="expect-grid">
+        <div class="expect-card">
+          <h3>Family Friendly</h3>
+          <p>A welcoming atmosphere for all ages. Kids are a blessing here.</p>
+        </div>
+        <div class="expect-card">
+          <h3>Spirit-Empowered</h3>
+          <p>We believe the gifts of the Spirit are for today — including healing, prophetic ministry, and power for everyday life.</p>
+        </div>
+        <div class="expect-card">
+          <h3>Genuine Community</h3>
+          <p>Real people growing together in faith, hope, and friendship.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ministries / Streams Teaser -->
+  <section class="ministries-teaser">
+    <div class="container">
+      <h2>Ministries Flowing Out</h2>
+      <p class="section-intro">From Family Worship Center, other ministries continue to flow — equipping believers in the gifts of the Spirit, training in healing and prophetic ministry, and reaching our community. We are blessed to partner with ministers such as Gary McGillvary (Gifts of Healings) and Doug & Yvette Kent of Transformation Worship Center.</p>
+      <div class="cta-box">
+        <a href="ministries.html" class="btn btn-primary">Explore Our Ministries</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facebook -->
+  <section class="facebook-cta">
+    <div class="container">
+      <h2>Stay Connected</h2>
+      <p class="section-intro">For the latest updates, events, and messages, follow us on Facebook.</p>
+      <a href="https://www.facebook.com/FamilyWorshipCenterClarksville" target="_blank" rel="noopener" class="btn btn-primary">Visit Our Facebook Page</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>Family Worship Center</strong></p>
+      <p>1273 Northfield Dr, Clarksville, TN<br>
+      Phone: <a href="tel:9312167291">931-216-7291</a></p>
+      <div class="footer-links">
+        <a href="https://www.facebook.com/FamilyWorshipCenterClarksville" target="_blank" rel="noopener">Facebook</a> ·
+        <a href="contact.html">Contact</a> ·
+        <a href="visit.html">Plan Your Visit</a>
+      </div>
+      <p class="copyright">© 2026 Family Worship Center. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

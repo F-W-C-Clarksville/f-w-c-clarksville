@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Family Worship Center – Clarksville, TN</title>
+  <meta name="description" content="Contact Family Worship Center in Clarksville, TN. Phone, email, address, and Facebook.">
+
+  <style>
+    /* ===== Warm Lighthouse Theme ===== */
+    :root {
+      --navy: #1a2a4a;
+      --navy-dark: #0f1c33;
+      --gold: #c9a227;
+      --gold-light: #e8c547;
+      --cream: #f8f5f0;
+      --white: #ffffff;
+      --text: #2c2c2c;
+      --text-light: #5a5a5a;
+      --shadow: 0 4px 20px rgba(26, 42, 74, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--cream);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ===== Header ===== */
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo img {
+      height: 50px;
+      width: auto;
+      display: block;
+    }
+
+    .logo span {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0.5px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.25s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--gold);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 1.75rem;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy-dark);
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(201, 162, 39, 0.25);
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+      color: var(--white);
+      padding: 3.5rem 0 4rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      margin-bottom: 0.75rem;
+      animation: fadeInUp 0.7s ease-out;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.9);
+      max-width: 600px;
+      margin: 0 auto;
+      animation: fadeInUp 0.7s ease-out 0.15s both;
+    }
+
+    /* ===== Sections ===== */
+    section {
+      padding: 3.5rem 0;
+    }
+
+    h2 {
+      font-size: 1.9rem;
+      color: var(--navy);
+      margin-bottom: 1.25rem;
+      text-align: center;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.75rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .contact-card {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      border-top: 4px solid var(--gold);
+      transition: all 0.3s ease;
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(26, 42, 74, 0.1);
+    }
+
+    .contact-card h3 {
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
+    }
+
+    .contact-card p {
+      color: var(--text-light);
+      font-size: 1.05rem;
+    }
+
+    .contact-card a {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .contact-card a:hover {
+      color: var(--gold);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: var(--navy-dark);
+      color: rgba(255,255,255,0.85);
+      padding: 2.5rem 0 1.5rem;
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--gold-light);
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-links {
+      margin: 1rem 0;
+    }
+
+    .copyright {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 700px) {
+      nav ul {
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+      .logo img {
+        height: 42px;
+      }
+      .logo span {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="FWC.jpg" alt="Family Worship Center">
+        <span>Family Worship Center</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="visit.html">Plan Your Visit</a></li>
+          <li><a href="ministries.html">Ministries</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you. Reach out anytime — we’re here to help.</p>
+    </div>
+  </section>
+
+  <!-- Contact Info -->
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-card">
+          <h3>Phone</h3>
+          <p><a href="tel:9312167291">931-216-7291</a></p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Email</h3>
+          <p><a href="mailto:jlock7291@charter.net">jlock7291@charter.net</a></p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Address</h3>
+          <p>1273 Northfield Dr<br>Clarksville, TN</p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Facebook</h3>
+          <p>
+            <a href="https://www.facebook.com/FamilyWorshipCenterClarksville" target="_blank" rel="noopener">
+              Message us on Facebook
+            </a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>Family Worship Center</strong></p>
+      <p>1273 Northfield Dr, Clarksville, TN<br>
+      Phone: <a href="tel:9312167291">931-216-7291</a></p>
+      <div class="footer-links">
+        <a href="https://www.facebook.com/FamilyWorshipCenterClarksville" target="_blank" rel="noopener">Facebook</a> ·
+        <a href="index.html">Home</a>
+      </div>
+      <p class="copyright">© 2026 Family Worship Center. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
