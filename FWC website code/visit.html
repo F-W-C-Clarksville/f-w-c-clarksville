@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan Your Visit | Family Worship Center – Clarksville, TN</title>
+  <meta name="description" content="Planning your first visit to Family Worship Center in Clarksville? Find service times, location, what to expect, and everything you need to feel welcome.">
+
+  <style>
+    /* ===== Warm Lighthouse Theme ===== */
+    :root {
+      --navy: #1a2a4a;
+      --navy-dark: #0f1c33;
+      --gold: #c9a227;
+      --gold-light: #e8c547;
+      --cream: #f8f5f0;
+      --white: #ffffff;
+      --text: #2c2c2c;
+      --text-light: #5a5a5a;
+      --shadow: 0 4px 20px rgba(26, 42, 74, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--cream);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ===== Header ===== */
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--gold);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: all 0.2s;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy-dark);
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      border: 2px solid var(--gold);
+      color: var(--gold);
+    }
+
+    .btn-outline:hover {
+      background: var(--gold);
+      color: var(--navy-dark);
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+      color: var(--white);
+      padding: 3.5rem 0 4rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.9);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ===== Sections ===== */
+    section {
+      padding: 3.5rem 0;
+    }
+
+    h2 {
+      font-size: 1.9rem;
+      color: var(--navy);
+      margin-bottom: 1.25rem;
+      text-align: center;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+      color: var(--text-light);
+      font-size: 1.1rem;
+    }
+
+    /* Service Times */
+    .times-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .time-card {
+      background: var(--white);
+      padding: 1.75rem;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      border-top: 4px solid var(--gold);
+    }
+
+    .time-card h3 {
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    .time-card .time {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .time-card .note {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      margin-top: 0.5rem;
+    }
+
+    /* Location */
+    .location-box {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .location-box p {
+      font-size: 1.15rem;
+      margin-bottom: 0.75rem;
+    }
+
+    /* What to Expect */
+    .expect-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .expect-card {
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .expect-card h3 {
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+    }
+
+    /* FAQ */
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      margin-bottom: 1rem;
+    }
+
+    .faq-item h3 {
+      color: var(--navy);
+      margin-bottom: 0.5rem;
+      font-size: 1.15rem;
+    }
+
+    .faq-item p {
+      color: var(--text-light);
+    }
+
+    /* Contact CTA */
+    .contact-cta {
+      background: var(--navy);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .contact-cta h2 {
+      color: var(--white);
+    }
+
+    .contact-cta p {
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .contact-cta a {
+      color: var(--gold-light);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: var(--navy-dark);
+      color: rgba(255,255,255,0.85);
+      padding: 2.5rem 0 1.5rem;
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--gold-light);
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-links {
+      margin: 1rem 0;
+    }
+
+    .copyright {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    /* Mobile */
+    @media (max-width: 700px) {
+      nav ul {
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+      .logo {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+  <div class="container header-inner">
+    <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 12px;">
+      <img src="FWC.jpg" alt="Family Worship Center" style="height: 50px; width: auto;">
+      <span style="font-size: 1.25rem; font-weight: 700; color: white; letter-spacing: 0.5px;">
+        Family Worship Center
+      </span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="visit.html">Plan Your Visit</a></li>
+        <li><a href="ministries.html">Ministries</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="give.html">Give</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Plan Your Visit</h1>
+      <p>We’re so glad you’re considering joining us. Here’s everything you need to feel at home on your first Sunday.</p>
+    </div>
+  </section>
+
+  <!-- Service Times -->
+  <section>
+    <div class="container">
+      <h2>Service Times</h2>
+      <p class="section-intro">Everyone is welcome — come as you are.</p>
+      <div class="times-grid">
+        <div class="time-card">
+          <h3>Sunday Morning</h3>
+          <div class="time">11:00 AM</div>
+          <p class="note">Morning Worship</p>
+        </div>
+        <div class="time-card">
+          <h3>Wednesday Evening</h3>
+          <div class="time">6:30 PM</div>
+          <p class="note">Training on Gifts of Healings<br>by Gary McGillvary</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section style="background: var(--white);">
+    <div class="container">
+      <h2>Location</h2>
+      <div class="location-box">
+        <p><strong>Family Worship Center</strong></p>
+        <p>1273 Northfield Dr<br>Clarksville, TN</p>
+        <p style="margin-top: 1.25rem;"><strong>Phone:</strong> <a href="tel:9312167291">931-216-7291</a></p>
+        <p style="margin-top: 1.5rem;">
+          <a href="https://www.google.com/maps/search/?api=1&query=1273+Northfield+Dr+Clarksville+TN" target="_blank" rel="noopener" class="btn btn-primary">Get Directions</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Expect -->
+  <section>
+    <div class="container">
+      <h2>What to Expect</h2>
+      <p class="section-intro">We want your first visit to feel comfortable and meaningful.</p>
+      <div class="expect-grid">
+        <div class="expect-card">
+          <h3>Family Friendly</h3>
+          <p>A warm atmosphere for all ages. Children are a blessing and welcome in our services.</p>
+        </div>
+        <div class="expect-card">
+          <h3>Spirit-Empowered</h3>
+          <p>We believe the gifts of the Spirit are for today — including healing, prophetic ministry, and power for everyday life.</p>
+        </div>
+        <div class="expect-card">
+          <h3>Casual & Welcoming</h3>
+          <p>Come as you are. There’s no dress code — just a desire to encounter Jesus together.</p>
+        </div>
+        <div class="expect-card">
+          <h3>Genuine Community</h3>
+          <p>Real people growing in faith, hope, and friendship. You’ll be greeted with kindness.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kids & Youth -->
+  <section style="background: var(--white);">
+    <div class="container">
+      <h2>Kids & Youth</h2>
+      <p class="section-intro">We love seeing families grow together in faith. Children’s ministry and youth opportunities are part of life at Family Worship Center. Feel free to bring your kids — they are always welcome.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="container">
+      <h2>First-Time Visitor FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>What should I wear?</h3>
+          <p>Come as you are. Most people dress casually. The focus is on Jesus, not clothing.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Where do I park?</h3>
+          <p>We share the parking lot with Dos Margaritas Mexican Restaurant at 1273 Northfield Dr. Plenty of parking is available right in front of the building.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is it okay to bring kids?</h3>
+          <p>Absolutely. Children are a blessing here and are welcome in our services.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How long is the service?</h3>
+          <p>Sunday morning worship typically lasts about 90 minutes. Wednesday evenings are focused teaching and ministry times.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What if I’m new to church?</h3>
+          <p>You are completely welcome. We are a family-oriented, Bible-believing church that loves people right where they are.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="contact-cta">
+    <div class="container">
+      <h2>Still Have Questions?</h2>
+      <p>We’re happy to help. Call us or reach out anytime.</p>
+      <p>
+        <strong>Phone:</strong> <a href="tel:9312167291">931-216-7291</a><br>
+        <strong>Email:</strong> <a href="mailto:jlock7291@charter.net">jlock7291@charter.net</a>
+      </p>
+      <p style="margin-top: 1.5rem;">
+        <a href="https://www.facebook.com/FamilyWorshipCenterClarksville" target="_blank" rel="noopener" class="btn btn-primary">Message Us on Facebook</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><strong>Family Worship Center</strong></p>
+      <p>1273 Northfield Dr, Clarksville, TN<br>
+      Phone: <a href="tel:9312167291">931-216-7291</a></p>
+      <div class="footer-links">
+        <a href="https://www.facebook.com/FamilyWorshipCenterClarksville" target="_blank" rel="noopener">Facebook</a> ·
+        <a href="contact.html">Contact</a> ·
+        <a href="index.html">Home</a>
+      </div>
+      <p class="copyright">© 2026 Family Worship Center. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
