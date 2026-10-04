@@ -238,19 +238,6 @@
       background: white;
     }
 
-    .clipart-card {
-      background: linear-gradient(160deg, var(--navy-dark) 0%, var(--navy) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 300px;
-    }
-
-    .clipart-card svg {
-      width: 150px;
-      height: 180px;
-    }
-
     /* Service Times */
     .times-grid {
       display: grid;
@@ -369,6 +356,32 @@
       padding: 3.5rem 0;
     }
 
+    .closing {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.75rem;
+      flex-wrap: wrap;
+    }
+
+    .closing-photo {
+      width: 168px;
+      height: 210px;
+      object-fit: cover;
+      object-position: center 18%;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      flex: 0 0 auto;
+    }
+
+    .closing-copy {
+      max-width: 420px;
+    }
+
+    .closing-copy .section-intro {
+      margin-bottom: 1.25rem;
+    }
+
     /* Animations */
     @keyframes fadeInUp {
       from {
@@ -414,10 +427,6 @@
 
       .life-card img {
         height: 260px;
-      }
-
-      .clipart-card {
-        min-height: 260px;
       }
 
       nav ul {
@@ -493,17 +502,7 @@
           <img src="john.png" alt="Pastor Jon Lockwood">
           <div class="caption">Pastor Jon Lockwood</div>
         </div>
-        <div class="life-card">
-          <img src="Modesto.jpg" alt="Church family">
-        </div>
-        <div class="life-card clipart-card" aria-hidden="true">
-          <svg viewBox="0 0 120 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M60 8 L78 42 H68 L84 70 H72 L92 108 H28 L48 70 H36 L52 42 H42 Z" fill="#c9a227"/>
-            <rect x="52" y="108" width="16" height="28" rx="1" fill="#e8c547"/>
-            <circle cx="60" cy="28" r="5" fill="#f8f5f0"/>
-            <path d="M18 136 H102" stroke="#e8c547" stroke-width="3" stroke-linecap="round"/>
-          </svg>
-        </div>
+      </div>
     </div>
   </section>
 
@@ -588,10 +587,13 @@
 
   <!-- Facebook -->
   <section class="facebook-cta">
-    <div class="container">
-      <h2>Stay Connected</h2>
-      <p class="section-intro">For the latest updates, events, and messages, follow us on Facebook.</p>
-      <a href="https://www.facebook.com/FamilyWorshipCenterClarksville" target="_blank" rel="noopener" class="btn btn-primary">Visit Our Facebook Page</a>
+    <div class="container closing">
+      <img class="closing-photo" src="Modesto.jpg" alt="A family at Family Worship Center">
+      <div class="closing-copy">
+        <h2>Stay Connected</h2>
+        <p class="section-intro">For the latest updates, events, and messages, follow us on Facebook.</p>
+        <a href="https://www.facebook.com/FamilyWorshipCenterClarksville" target="_blank" rel="noopener" class="btn btn-primary">Visit Our Facebook Page</a>
+      </div>
     </div>
   </section>
 
