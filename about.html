@@ -203,6 +203,57 @@
       color: var(--navy);
     }
 
+    .pastor {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      background: var(--white);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      max-width: 850px;
+      margin: 0 auto;
+      border-top: 4px solid var(--gold);
+    }
+
+    .pastor-photo {
+      flex: 1 1 260px;
+      max-width: 340px;
+      background: #f3efe8;
+    }
+
+    .pastor-photo img {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+      max-height: 440px;
+      object-fit: cover;
+      object-position: center 15%;
+      display: block;
+    }
+
+    .pastor-copy {
+      flex: 1 1 280px;
+      padding: 1.8rem 1.7rem;
+    }
+
+    .pastor-copy h3 {
+      color: var(--navy);
+      font-size: 1.45rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .pastor-copy .role {
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 0.85rem;
+    }
+
+    .pastor-copy p {
+      color: var(--text-light);
+      margin: 0;
+    }
+
     /* ===== Footer ===== */
     footer {
       background: var(--navy-dark);
@@ -239,6 +290,13 @@
       }
       .logo span {
         font-size: 1.1rem;
+      }
+      .pastor-photo {
+        max-width: none;
+        flex-basis: 100%;
+      }
+      .pastor-photo img {
+        max-height: 480px;
       }
     }
   </style>
@@ -282,6 +340,17 @@
       <div class="content-box">
         <p>Family Worship Center is a warm, welcoming church family in Clarksville, Tennessee. We love Jesus, we love people, and we believe God still moves with power today.</p>
         <p>We are a place where families grow together, where the Word of God is taught with sincerity, and where the gifts of the Holy Spirit are welcomed and active.</p>
+      </div>
+
+      <div class="pastor">
+        <div class="pastor-photo">
+          <img src="Jon.jpg" alt="Pastor Jon Lockwood and his wife">
+        </div>
+        <div class="pastor-copy">
+          <h3>Pastor Jon Lockwood</h3>
+          <div class="role">Pastor</div>
+          <p>Pastor Jon and his wife welcome you to Family Worship Center. Come as you are — you will find a family that loves Jesus, loves people, and is glad you are here.</p>
+        </div>
       </div>
     </div>
   </section>
