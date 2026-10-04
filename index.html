@@ -238,20 +238,17 @@
       background: white;
     }
 
-    .life-under {
-      max-width: 960px;
-      margin: 2rem auto 0;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
+    .clipart-card {
+      background: linear-gradient(160deg, var(--navy-dark) 0%, var(--navy) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 300px;
     }
 
-    .life-under img {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      object-position: center 22%;
-      display: block;
+    .clipart-card svg {
+      width: 150px;
+      height: 180px;
     }
 
     /* Service Times */
@@ -419,8 +416,8 @@
         height: 260px;
       }
 
-      .life-under img {
-        height: 300px;
+      .clipart-card {
+        min-height: 260px;
       }
 
       nav ul {
@@ -496,11 +493,17 @@
           <img src="john.png" alt="Pastor Jon Lockwood">
           <div class="caption">Pastor Jon Lockwood</div>
         </div>
-      </div>
-
-      <div class="life-under">
-        <img src="Modesto.jpg" alt="Sunday at Family Worship Center">
-      </div>
+        <div class="life-card">
+          <img src="Modesto.jpg" alt="Church family">
+        </div>
+        <div class="life-card clipart-card" aria-hidden="true">
+          <svg viewBox="0 0 120 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M60 8 L78 42 H68 L84 70 H72 L92 108 H28 L48 70 H36 L52 42 H42 Z" fill="#c9a227"/>
+            <rect x="52" y="108" width="16" height="28" rx="1" fill="#e8c547"/>
+            <circle cx="60" cy="28" r="5" fill="#f8f5f0"/>
+            <path d="M18 136 H102" stroke="#e8c547" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
     </div>
   </section>
 
