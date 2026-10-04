@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Give | Family Worship Center – Clarksville, TN</title>
-  <meta name="description" content="Partner with Family Worship Center through your giving. Support the work of the ministry in Clarksville, TN.">
+  <meta name="description" content="Partner with Family Worship Center through your giving. Give with Cash App at $fwcchurch, or during services in Clarksville, TN.">
 
   <style>
     /* ===== Warm Lighthouse Theme ===== */
@@ -18,6 +18,8 @@
       --text: #2c2c2c;
       --text-light: #5a5a5a;
       --shadow: 0 4px 20px rgba(26, 42, 74, 0.08);
+      --cash: #00d632;
+      --cash-dark: #00b52b;
     }
 
     * {
@@ -120,6 +122,23 @@
       box-shadow: 0 6px 15px rgba(201, 162, 39, 0.25);
     }
 
+    .btn-cashapp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      background: var(--cash);
+      color: #04210c;
+      min-width: 230px;
+    }
+
+    .btn-cashapp:hover {
+      background: var(--cash-dark);
+      color: #04210c;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(0, 181, 43, 0.28);
+    }
+
     /* ===== Hero ===== */
     .hero {
       background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
@@ -175,12 +194,31 @@
       margin-bottom: 0;
     }
 
+    .verse {
+      margin-top: 1.5rem;
+      padding: 1rem 1.15rem;
+      border-left: 3px solid var(--gold);
+      background: var(--cream);
+      border-radius: 0 8px 8px 0;
+      color: var(--navy);
+      font-size: 1.02rem;
+    }
+
+    .verse span {
+      display: block;
+      margin-top: 0.35rem;
+      color: var(--gold);
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      font-size: 0.92rem;
+    }
+
     .ways-box {
       background: var(--white);
-      padding: 2rem;
+      padding: 2rem 1.5rem 1.6rem;
       border-radius: 12px;
       box-shadow: var(--shadow);
-      max-width: 700px;
+      max-width: 760px;
       margin: 2.5rem auto 0;
       text-align: center;
       animation: fadeInUp 0.6s ease-out 0.15s both;
@@ -188,7 +226,102 @@
 
     .ways-box h3 {
       color: var(--navy);
-      margin-bottom: 1rem;
+      margin-bottom: 0.4rem;
+      font-size: 1.45rem;
+    }
+
+    .ways-lead {
+      color: var(--text-light);
+      margin-bottom: 1.35rem;
+    }
+
+    .give-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.9fr;
+      gap: 1rem;
+      text-align: left;
+    }
+
+    .give-card {
+      border-radius: 12px;
+      padding: 1.35rem 1.25rem 1.25rem;
+    }
+
+    .give-card h4 {
+      color: var(--navy);
+      font-size: 1.05rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .cashapp-card {
+      background:
+        radial-gradient(420px 180px at 100% 0%, rgba(0, 214, 50, 0.16), transparent 60%),
+        linear-gradient(180deg, #f7fff9 0%, #ffffff 72%);
+      border: 1px solid rgba(0, 181, 43, 0.28);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #067a22;
+      margin-bottom: 0.45rem;
+    }
+
+    .cashtag {
+      font-size: clamp(1.7rem, 4vw, 2.15rem);
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      color: var(--navy);
+      line-height: 1.1;
+      margin-bottom: 0.55rem;
+    }
+
+    .cashapp-card p,
+    .side-card p {
+      color: var(--text-light);
+      font-size: 0.98rem;
+    }
+
+    .cashapp-card .btn-cashapp {
+      margin-top: 1rem;
+    }
+
+    .account-note {
+      margin-top: 0.85rem;
+      font-size: 0.88rem;
+      color: var(--text-light);
+    }
+
+    .account-note a {
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .account-note a:hover {
+      color: #067a22;
+    }
+
+    .side-card {
+      background: var(--cream);
+      border: 1px solid rgba(26, 42, 74, 0.08);
+    }
+
+    .side-card p + p {
+      margin-top: 0.85rem;
+    }
+
+    .side-card a {
+      color: var(--navy);
+      font-weight: 650;
+      font-weight: 600;
+    }
+
+    .side-card a:hover {
+      color: var(--gold);
     }
 
     /* Animations */
@@ -240,6 +373,14 @@
       .logo span {
         font-size: 1.1rem;
       }
+      .give-grid {
+        grid-template-columns: 1fr;
+      }
+      .content-box,
+      .ways-box {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+      }
     }
   </style>
 </head>
@@ -283,18 +424,39 @@
         <p>We believe giving is an act of obedience and a powerful expression of our faith. When we tithe and give offerings, we are putting God first and declaring our trust in Him as our Provider. Scripture tells us that God loves a cheerful giver, and that as we sow generously, we also reap generously — not only financially, but in every area of life. Giving positions us to walk in the blessing and abundance that Jesus purchased for us.</p>
 
         <p>At Family Worship Center, your generosity helps us continue shining as a lighthouse in Clarksville. It supports the work of the ministry, equips believers in the gifts of the Spirit, and allows us to reach more people with the love and power of God. Thank you for partnering with us through your faithful giving.</p>
+
+        <p class="verse">Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver.<span>2 Corinthians 9:7</span></p>
       </div>
 
       <div class="ways-box">
         <h3>Ways to Give</h3>
-        <p>You can give during our services or contact us for more information.</p>
-        <p style="margin-top: 1.25rem;">
-          <strong>Phone:</strong> <a href="tel:9312167291">931-216-7291</a><br>
-          <strong>Email:</strong> <a href="mailto:jlock7291@charter.net">jlock7291@charter.net</a>
-        </p>
-        <p style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--text-light);">
-          Online giving will be available soon.
-        </p>
+        <p class="ways-lead">Give online with Cash App, or give during our services.</p>
+
+        <div class="give-grid">
+          <div class="give-card cashapp-card">
+            <div class="eyebrow">Online giving</div>
+            <h4>Cash App</h4>
+            <div class="cashtag">$fwcchurch</div>
+            <p>Send your tithe or offering securely. On a phone, this opens Cash App so you can give to Family Worship Center.</p>
+            <a class="btn btn-cashapp" href="https://cash.app/$fwcchurch" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="1" y="1" width="22" height="22" rx="5" fill="#04210c"/>
+                <text x="12" y="16.5" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" font-weight="700" fill="#00d632">$</text>
+              </svg>
+              Give with Cash App
+            </a>
+            <p class="account-note">Account: <a href="https://cash.app/$fwcchurch" target="_blank" rel="noopener">$fwcchurch</a> · Jonathan Lockwood</p>
+          </div>
+
+          <div class="give-card side-card">
+            <h4>In person</h4>
+            <p>You can also give during Sunday morning worship or Wednesday evening service.</p>
+            <p>
+              <strong>Phone:</strong> <a href="tel:9312167291">931-216-7291</a><br>
+              <strong>Email:</strong> <a href="mailto:jlock7291@charter.net">jlock7291@charter.net</a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
