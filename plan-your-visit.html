@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="logo.jpg" type="image/jpeg">
+  <meta name="theme-color" content="#1a2a4a">
   <title>Plan Your Visit | Family Worship Center – Clarksville, TN</title>
   <meta name="description" content="Planning your first visit to Family Worship Center in Clarksville? Find service times, location, what to expect, and everything you need to feel welcome.">
 
@@ -70,13 +72,22 @@
     }
 
     .logo {
-      font-size: 1.35rem;
-      font-weight: 700;
-      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo img {
+      height: 50px;
+      width: auto;
+      display: block;
     }
 
     .logo span {
-      color: var(--gold);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0.5px;
     }
 
     nav ul {
@@ -322,8 +333,11 @@
         gap: 1rem;
         font-size: 0.9rem;
       }
-      .logo {
-        font-size: 1.2rem;
+      .logo img {
+        height: 44px;
+      }
+      .logo span {
+        font-size: 1.1rem;
       }
     }
   </style>
@@ -333,17 +347,15 @@
   <!-- Header -->
   <header>
     <div class="container header-inner">
-      <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 12px;">
-        <img src="FWC.jpg" alt="Family Worship Center" style="height: 50px; width: auto;">
-        <span style="font-size: 1.25rem; font-weight: 700; color: white; letter-spacing: 0.5px;">
-          Family Worship Center
-        </span>
+      <a href="index.html" class="logo">
+        <img src="logo.jpg" alt="Family Worship Center">
+        <span>Family Worship Center</span>
       </a>
-      <nav>
+      <nav aria-label="Main navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="plan-your-visit.html" class="active">Plan Your Visit</a></li>
+          <li><a href="plan-your-visit.html" class="active" aria-current="page">Plan Your Visit</a></li>
           <li><a href="ministries.html">Ministries</a></li>
           <li><a href="events.html">Events</a></li>
           <li><a href="media.html">Media</a></li>
@@ -397,7 +409,7 @@
     <div class="container">
       <h2>Location</h2>
       <div class="location-box">
-        <img src="outside.png" alt="Family Worship Center building" class="location-photo">
+        <img loading="lazy" src="outside.jpg" alt="Family Worship Center building" class="location-photo">
         <p><strong>Family Worship Center</strong></p>
         <p>1273 Northfield Dr<br>Clarksville, TN</p>
         <p style="margin-top: 1.25rem;"><strong>Phone:</strong> <a href="tel:9312167291">931-216-7291</a></p>
